@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Friend Viewer",
+  "version": "2.0",
+  "description": "This extension makes the friends of those affected by the friend bug on Roblox visible.",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.roblox.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["roblox-friends.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Friend Viewer"
+  }
+}
